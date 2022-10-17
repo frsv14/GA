@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +12,13 @@
     background-color: var(--blue)
   }
 </style>
-<script>    
+<script>   
+//https://flems.io/#0=N4IgzgpgNhDGAuEAmIBcIB0ALeBbKIANCAGYCWMYaA2qAHYCGuEamO+RIsA9nYn6wA6dADwBCACIB5AMIAVAJoAFAKIACdlAB8wkZp2isEBkgMj4ZeDC1q5AJwawA1moCy3AK6Q1IgPQWrCDMweABPa2E1NVQ7bm54YEiotQBaFIAjKA8IVDUAYgBGCABOAAYSEgBuJKia1JSAczsICDpcvNKADgrS0uq6KIBfJPTuJFDEgeT0xycmzzokFJ4objtcgDcGOwAKNMzsgEok4dFfEPCg3TBYOzIAB3gbZLqSDzoEMl41Hj5YqDUO0Ok2SyQYMDs8B2AHIAOprJxkOgNMTQw5qXy+NRObhQKDbNTcXBqN4fCy8VpqTJkOzY8H4pB1U6guqYtQAcQg8DU8CMali8TU0AgzD4wi2tNpAF41EhuLAPKL4BgAI7ZOyhADKwoQaxhMTi8DR-WEMG55DsIQA+gLiVKQfy4rgFLkAEy9QhJW0ADTdHq9ToAWn7Sp66Kc2TJmgxEGoGCT3p9viQ1mpIPALMi42oJWQGJkIDnwdlhKSkwM5QB3Oh3Bo4IFqB1s7Xc3mFrZZQvcEhFu75mD1A6F+DcON0eJGWkd7KApE8rBkMA-BjeQQgKBkOvwIdr45TOwYC4wQ9cpSxe4QSGhGH7TvQwhqaHNJDG4SnUuJ8kDEf3GAkKHog6B5HhAJ7wGe3AXleN4ZHeD7QqE0CrJWaJvsIH5kl836QbW9aATUwFhMe6YQVBYQwUO96PgAEvEShIk4qHhuhdBll+srcNWf4AY2XqHkRoEkeel7kdCt7ZFR0IAIJqgwTGnGxWFqAASk6gLApEZpqAoagyryi4YLaCiVC8Axad6unzgZPr9GoWmBpZ+lgIZQb9O+dBaTczStAAMtwDSWXKCpKqq6pajqI67NCeReS0dApKsDSvos8qKq0yomEgKgbOlPmLvwl4wrgniQMVOVUYlADSEChIcJpTFEinfFVNU7BA+ENaCaa3HFfkNBgSJ0JecgQAAHtyMoAAZ1KCmo9ZS3q+C6agACTAIJ810N6gwPmtG3eXQCjMl1UQyBu6VqIty17RgsDnXw227ett33fAR2TbZJ1qDNplfWoZAkG1L1kOlFk2AArL0agAGTQ0KwPpTpEO9BpnUnVWNabnhn0ncdJ3QN4AOAqBd0gw9PhqJDpQw3DJOvTpIiUyjDp-T+3FAjjXV411BOFkTQOk6DFNUzT8OC3wSNM6UqN-VEGPs3VP1DErQpQITPYC69YNS6LdNk29wvMyrUQ-rhAGc6C3Pc6aXJqAAQh4Ga8GAzRgB4UATRxwXpaFl7hTAupRXk6SOyOdBgCk9yu5AL6Kyl3t8BgmXZbl+WtIV0JODVGNUdVoRnhAYCQGAe5JEkTUDHnBdF4XDYs8kWlZ6EUeFzHll56M2xZTlidNz94IiTsTctzXSBx8rdC6OctwPE8LF+EYJgGLoozjAYoIiPcWjuDlaihJ4tLFV4w6jpAfPwEu9zcGAlhYRgfhb3Um--UgUprrFrQJf5a5aA-6-JM-Mgr81whyduHSO0dkA-z-lPVeoQzC+H0JwSAAcvxUHQODVAAB2EAO16BMBYOgDAAArKgxBfj8HgKwXBhB8HMFYLdIunAKHpWoYMAAuoMIAA
+
+    function control (){
+      alert('Working!') // kollar om functionen blir kallad
+    }
+    
     // Get the root element
 var r = document.querySelector(':root');
 
@@ -21,7 +26,6 @@ let first_room ={
   roomY: 200,
   roomX: 200,
   roomZ: 200,
-  
 }
 // Create a function for setting a variable value
 function downright() {
@@ -37,12 +41,13 @@ function topright() {
    r.style.setProperty('--blue', 'HotPink')
 }
 
-function Room (roomY, roomX, roomZ){
- this.roomY   
- this.roomX
- this.roomZ
- 
- 
+function downleft() {
+  r.style.setProperty('--blue', 'Aqua')
+}
+function Room (){
+ let Y = this.roomY;   
+ let X = this.roomX;
+ let Z = this.roomZ;
 }
 
 let screenLog = document.querySelector('#screen-log');
@@ -53,8 +58,6 @@ document.addEventListener('mousemove', logKey);
         Screen X/Y: ${e.screenX}, ${e.screenY}
         Client X/Y: ${e.clientX}, ${e.clientY}`;
         
-        let cordX = e.clientX;
-        let cordY = e.clientY;
         
         if(e.clientX > 500 && e.clientY > 500){
           downright();
@@ -63,12 +66,21 @@ document.addEventListener('mousemove', logKey);
           topleft();
         }
         else if (e.clientX < 500 && e.clientY > 500){
-          alert("");
+          downleft();
         }
         else if (e.clientX > 500 && e.clientY < 500){
           topright();
         }
     }
+    
+let Buttonsresult = document.querySelector('#buttons-pressed');
+document.addEventListener('keydown', KeyPresses)
+
+  
+  function KeyPresses() {
+      let keypressed = KeyboardEvent.key
+      alert(keypressed);
+  }
 
 </script>
 
@@ -76,6 +88,7 @@ document.addEventListener('mousemove', logKey);
 
 <body>
     <p>Move your mouse to see its position.</p>
-    <p id="screen-log"></p>   
+    <p id="screen-log"></p>
+    <p id="buttons-pressed"></p>
 </body>
 </html>

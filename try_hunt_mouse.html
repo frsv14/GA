@@ -1,40 +1,81 @@
+
+<!DOCTYPE html>
 <html>
 <head>
 <title> Track Mouse </title>
-<script type="text/javascript">
-
-        
-    //var e = window.event;
-
-    //var posX = e.clientX; // https://stackoverflow.com/questions/7790725/javascript-track-mouse-position (allt)
-    //var posY = e.clientY;
-
-    //document.Form1.posX.value = posx;
-    //document.Form1.posY.value = posy;
-
-
-   
-    let screenLog = document.querySelector('#screen-log');
-    document.addEventListener('mousemove', logKey);
-   
-    function logKey(e) {       //https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/clientY
+<style>
+  :root{
+    --blue: #1e90ff;
     
-    Form1.innerText = `
-    Client X/Y: ${e.clientX}, ${e.clientY}`;
+    --green: #08ff00;
+  }
+  body{
+    background-color: var(--blue)
+  }
+</style>
+<script>    
+    // Get the root element
+var r = document.querySelector(':root');
+
+let first_room ={
+  roomY: 200,
+  roomX: 200,
+  roomZ: 200,
+  
+}
+// Create a function for setting a variable value
+function downright() {
+  // Set the value of variable --blue to another value (in this case "lightblue")
+  r.style.setProperty('--blue', 'red');
+}
+
+function topleft() {
+  r.style.setProperty('--blue', 'yellow')
+}
+
+function topright() {
+   r.style.setProperty('--blue', 'HotPink')
+}
+
+function Room (roomY, roomX, roomZ){
+ this.roomY   
+ this.roomX
+ this.roomZ
+ 
+ 
+}
+
+let screenLog = document.querySelector('#screen-log');
+document.addEventListener('mousemove', logKey);
+
+    function logKey(e) {
+        screenLog.innerText = `
+        Screen X/Y: ${e.screenX}, ${e.screenY}
+        Client X/Y: ${e.clientX}, ${e.clientY}`;
+        
+        let cordX = e.clientX;
+        let cordY = e.clientY;
+        
+        if(e.clientX > 500 && e.clientY > 500){
+          downright();
+        }
+        else if (e.clientX < 500 && e.clientY < 500){
+          topleft();
+        }
+        else if (e.clientX < 500 && e.clientY > 500){
+          alert("");
+        }
+        else if (e.clientX > 500 && e.clientY < 500){
+          topright();
+        }
     }
-
-    // https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/MouseEvent ska kolla igenom imorn.
-
-// skapa många små grids eller lådor som täcker hela skärmen eller se om du kan modifiera varje individuell pixel
 
 </script>
 
 </head>
 
-<body onclick="">
-<p id="Form1">
-
-</p>
+<body>
+    <p>Move your mouse to see its position.</p>
+    <p id="screen-log"></p>   
 </body>
 </html>
-

@@ -16,8 +16,41 @@
   }
 </style>
 <script>   
-//https://flems.io/#0=N4IgzgpgNhDGAuEAmIBcIB0ALeBbKIANCAGYCWMYaA2qAHYCGuEamO+RIsA9nYn6wA6dYcIA8AQgAiAeQDCAFQCaABQCiAAnZQAfOO166YrBAZJDY+GXgwdGhQCcGsANYaAstwCukDWID0VjYQFmDwAJ62whoaqA7c3PDA0TEaALRpAEZQXhCoGgDEAIwQAJwADCQkANwpMXXpaQDmDhAQdPkF5QAcVeXltXQxAL4pmdxI4clDqZnOLi3edEhpPFDcDvkAbgwOABQZ2bkAlCmjRv5hkSHiYLAOZAAO8Hb1dP7+DSRedAhkvBoeHx4lANHtjtNUqkGDAHPA9gByADqGxcZDoTQkCOOGg+Ghc3CgUF2Gm4uA031+Vl47Q02TIDnxMOJSAa5yhDTxAHEIPANPATBp4okNNAIMw+MIdozGQBeDRIbiwLwS+AYACOuQc4QAymKEBtEXEEvBsYNhDA+eQHGEAPrC8myyFChK4JT5ABM-UIKQdAA1Pd7fa6AFqB8o+ujnPFyVoMRAaBgUn5-AEkDYaSDwKwYxMaaVkBjZCD5mG5YSU1NDRUAdzoDyaOHBGmdeL1fIFJZ2ORL3BIpYeRZgjSOJfg3ETdESJkZ3dyYPR-KwZDAgIYvkEICgZEb8FHm9OMwcGCuMBPvJU8UeEDh4URhx7CMIGgRrSQZuE5wrKepQ3HjxgEh4RxZ1j1PCBz3gS9uGvW97yyR9nwRcJoHWGtsU-UQ6ErX9+RghsmxAuowIiM8s2g2CIng0cnxfAAJRIVHRFwMKjLCcP+atuDrQDgJbX0T1IiDyKvG8qIRB9clohEAEFNQYVjzg4gEACVXTBCFoktDQlA0eUBRXDAHSUapUi03kND9PSl0M-1Bg0bSQ2sgywCM0NBi-OhtLuVp2gAGW4JprMVZVVQ1LVdX1cd9gRAofLaOg0nWJoP2WJUVXaNUzCQNQtkyvyV34G9EVwbxIFKvLaOSgBpCBwmOc0ZhiZShhquq9ggIimqhTN7gSgKmgwdE6BvBQIAADz5eUAAMGihHU+tpP1-HdDQABJgGExa6D9YZnw2rbfLoJR2R6mI5G3TLLJW-IDowWBLr4Xb9s2+7HvgE7pvss6NDmszuqhMgSA6t6yEyqy7AAVn6DQADJYdFUHMt0qH+k0gGetresd0I76ztOs7oF8IGwQgh6waevwNGh8o4YRsn3t0sRqbR50frwgCICA8E8Z6gmeqJksSZB8nwapmm6cR0W+BRlnynR9mYix3ieb+kY1dFKBif7EX3ohuXJYZimPvF1mNZif8COA3moX5-mLQsgAhLxs14MBWjALwoCmhV0rCzUb0imADRigpMhd8c6DANJHg9yB3wa4QQoyvgMGy3L8sK9pioRFw6qx2javqrC3man9OI0IvmzZxNYXhCC8+LjHS56s4sICHynhedv-BMMxDHEcZJkMKExEeHRPDyjRwm8RlSp8McJ0gIX4FXR5uDAaxOIwAJx4aMeNDIJBZU3eL2iSwLNx0XeR9SA+j5PkBw9dqOY7j5Ar5v8R-CH8ILF7vAuhOCQGDr+Kg6AijdFQB6EAe16BMBYOgDAAArKgxAgT8HgKwWBhB4HMFYPdMAaCuC8Ewdg4YABdYYQA
-    function control (){
+//https://flems.io/#0=N4IgzgpgNhDGAuEAmIBcIB0ALeBbKIANCAGYCWMYaA2qAHYCGuEamO+RIsA9nYn6wA6dYcIA8AQgAiAeQDCAFQCaABQCiAAnZQAfOO166YrBAZJDY+GXgwdGhQCcGsANYaAstwCukDWID0VjYQFmDwAJ62whoaqA7c3PDA0TEaALRpAEZQXhCoGgDEAIwQAJwADCQkANwpMXXpaQDmDhAQdPkF5QAcVeXltXQxAL4pmdxI4clDqZnOLi3edEhpPFDcDvkAbgwOABQZ2bkAlCmjRv5hkSHiYLAOZAAO8Hb1Iu8kXnQIZLwaW2QwF4GFA9scNNMYp9vlY-q0kBowRCGjB4Bp4RoALwaQSkEi4wapHEzGKteBeBxDeGEjTnKFfH5-I4QRHgyGpVEaZlYnF4gkNBpkilDZk0ukaaGMoYtNpDJHsmKcmXtHm4qr8knEolCykaZV0MUpFKS2FDEwADwYe3hhD1rXatuZxwVGk5FoYAH0djkWdjcQVcQBqeGB-WB0UCzU6s0QS1ekG5Q0zfz+LlkZYaJAQNFWKBQDQuJgQJwaXAAN6aUDITTRJDLDjAZbcDHgaIAJ8sS97clyvOENAB3BhgBG4bhbZh8I0zaNaWNW+Fg236pdcn1g4404TnUTvXcm35DHh8eL5sEumIg4vwPYAcgA6hsXOmmhJb+CUwXuHndhpuLgJQZU0VWyMgHALEEoDMBpxTeIlPwAcWzDR4BMdEEjRaAIEneBhB2cDwOxJBuFgLwcIwABHXIHHCABlLCEA2O84gw99BmETlyAbeAPXif8sXZPjcCUfIACZ+kIFIhIADTEiSpISXAAC05PKSS6HOT85FaFsWQYQCYUPCUNg0SBWxfDR9PwsgGGyFluwgYQDz+YiBzoB4mhweUUk-eiczQhy-xIf5dhsuzGm5eBuEsuhEhMcDAr2dMUKwQENFgYcWVxKtPPgZlcVOGcMCuGBiuzFR4kea9wjvQ4fVvW0ASBEEN0GHc6GcoYoseGASBvNkpOKiJSrMiruCqhwIlqrJ6ttW9wmgdYB3fbd9yAozuo8ryBpJBwhuuMr4DGiaptvOrcgajRbwACUSFR0xcFaNLWwyXO4Nzev65EipKiBDuO6rpuZS7bwAQSohgnvOTqNAAJUU1lIU5JQeVQwEMCEpRqlSaJOWk1HUrADHFOkwlOSUgn0aEpS2t3Tk7ntOgABluCaHliNI8iqOLOiGKi-ZbwKBnZTSdYmjY4QObI9p4AwMwkDULYZaZwF+GLO8xx8bDxwgS6xYAaQgcJN13IkYYNo29ggHaiSJYX2hZpoMHTOhiwUWM0WxAADBoiVo+5ZQ0aT-BEjQABJgD++26Gk4ZbQjqOA-aJRYNtuQqxloOQ-yBOMFgDO+Fj+PI7zgv4BTr2aVtrVq5r6uyBIK3S7IGX8bsABWfoNAAMm7jQ-vzlu+BRjv+mdX3bdc9zq22qvbdToloF8BvEQHsv8bEDRO-KHu+7Xofy78Lex4vW3us+sE56JBfUiXlkV6bwfW6P7fd-75uZZH4-ynHzVq6ni+Js-6pBvjEO+GgH772fqPHevd35P2Hi-E+E8iSbRnv1K+ICYKRk5AAIS8K2XgYBWhAigJ7TMJFpZ8EotRXmMBGICwKJkAhUU6BgDSI8EhkAkAS2WJQ8i8tFbK1Vu0dWt4XBGynpdQ2xtTY1xhjI7ympOQoLrjjGY7VdziEuPcJ4LxdwBBMGYQw4hxiTEMESMQjwdCeCVhocI3hwKa18FFUybQIHwDABoR43AwDWEPBgAI1iGhWIgUgTEuJo6i1ZriHQQSLGpFCWQcJuJmGELYRwrhyBYnxO0WY8IFh-AGE4JAehpoqDoCKN0VA5QQBx3oEWVgGAABWVBiDHn4PAVgdTCANOYE02AYA2lcF4J07pwwAC6wwgA
+
+function visual() {
+  function red () {
+    let red = "ff";
+    
+    return red;
+  }
+  function blue () {
+    let blue = "ff";
+    
+    return blue;
+  }
+  function green () {
+    let green = "ff";
+    
+    return green;
+  }
+  
+  function hexa(red, green, blue){
+    let hexa_value = "#"+red+green+blue;
+    
+    return hexa_value;
+  }
+  // bind det till kamera mögligt försök att ändra value buy wasd movment
+  
+  return hexa(red(), green(), blue());
+  
+}
+
+
+
+
+
+function control (){
       alert('Working!') // kollar om functionen blir kallad
     }
     
@@ -32,7 +65,7 @@ let first_room ={
 // Create a function for setting a variable value
 function downright() {
   // Set the value of variable --blue to another value (in this case "lightblue")
-  r.style.setProperty('--blue', 'red');
+  r.style.setProperty('--blue', visual());
 }
 
 function topleft() {
@@ -80,10 +113,13 @@ document.addEventListener('keydown', Key)
 
   
   function Key() {
-    alert(e.key)
+    let 
         
       
   }
+
+
+
 
 </script>
 

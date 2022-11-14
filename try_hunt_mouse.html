@@ -7,7 +7,7 @@
 <title> Track Mouse </title>
 <style>
   :root{
-    --blue: #1e90ff;
+    --blue: #105499;
     
     --green: #08ff00;
   }
@@ -23,19 +23,19 @@
 
 
 
-function visual() {
-  function red () {
-    let red = "ff";
+function visual(röd, blå, grön) {
+  function red (röd) {
+    let red = röd;
     
     return red;
   }
-  function blue () {
-    let blue = "ff";
+  function blue (blå) {
+    let blue = blå;
     
     return blue;
   }
-  function green () {
-    let green = "ff";
+  function green (grön) {
+    let green = grön;
     
     return green;
   }
@@ -49,6 +49,10 @@ function visual() {
   
   return hexa(red(), green(), blue());
   
+  //for(i = 0; 0 < 1980; i++){
+
+  //}
+
 }
 // kolla om man kan ändra värdet på css (border) se om man kan göra något finurligt med det 
 
@@ -71,11 +75,12 @@ let first_room ={
 // Create a function for setting a variable value
 function downright() {
   // Set the value of variable --blue to another value (in this case "lightblue")
-  r.style.setProperty('--blue', visual());
+  visual('8F', '20', '20')
+  r.style.setProperty('--blue', `${visual('8F', '20', '20')}`);
 }
 
 function topleft() {
-  r.style.setProperty('--blue', 'yellow')
+  r.style.setProperty('--blue', '#8F2020')
 }
 
 function topright() {

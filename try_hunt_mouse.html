@@ -82,21 +82,21 @@ let first_room ={
 // Create a function for setting a variable value
 function downright() {
   // Set the value of variable --blue to another value (in this case "lightblue")
-  r.style.setProperty('--blue', visual(5));
-  console.log(visual(5))
+  r.style.setProperty('--blue', visual(200));
+  console.log(visual(200));
 }
 
 function topleft() {
-  r.style.setProperty('--blue', visual(11))
-  console.log(visual(11))
+  r.style.setProperty('--blue', visual(118));
+  console.log(visual(118));
 }
 
 function topright() {
-   r.style.setProperty('--blue', 'HotPink')
+   r.style.setProperty('--blue', 'HotPink');
 }
 
 function downleft() {
-  r.style.setProperty('--blue', 'Aqua')
+  r.style.setProperty('--blue', 'Aqua');
 }
 function Room (){
  let Y = this.roomY;   
@@ -115,22 +115,27 @@ document.addEventListener('mousemove', logKey);
         Screen X/Y: ${e.screenX}, ${e.screenY}
         Client X/Y: ${e.clientX}, ${e.clientY}`;
         
-        
-        if(e.clientX > 500 && e.clientY > 500){
-          downright();
-        }
-        else if (e.clientX < 500 && e.clientY < 500){
-          topleft();
-        }
-        else if (e.clientX < 500 && e.clientY > 500){
-          downleft();
-        }
-        else if (e.clientX > 500 && e.clientY < 500){
-          topright();
-        }
+        console.log(e.clientX+" :X Y: "+e.clientY);
+
+        visual(e.clientX);
+        visual(e.clinetY);
+
+        //if(e.clientX > 500 && e.clientY > 500){
+        //downright();
+        //}
+        //else if (e.clientX < 500 && e.clientY < 500){
+        //  topleft();
+        //}
+        //else if (e.clientX < 500 && e.clientY > 500){
+        // downleft();
+        //}
+        //else if (e.clientX > 500 && e.clientY < 500){
+        //  topright();
+        //}
     }
 
 
+ 
 let Buttonsresult = document.querySelector('#buttons-pressed');
 document.addEventListener('keydown', Key)
 

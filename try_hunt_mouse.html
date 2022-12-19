@@ -87,7 +87,7 @@ function downright() {
 }
 
 function topleft() {
-  r.style.setProperty('--blue', visual(118));
+  r.style.setProperty('--blue', visual(4));
   console.log(visual(118));
 }
 
@@ -115,23 +115,23 @@ document.addEventListener('mousemove', logKey);
         Screen X/Y: ${e.screenX}, ${e.screenY}
         Client X/Y: ${e.clientX}, ${e.clientY}`;
         
-        console.log(e.clientX+" :X Y: "+e.clientY);
+        //console.log(e.clientX+" :X Y: "+e.clientY);
 
         visual(e.clientX);
         visual(e.clinetY);
 
-        //if(e.clientX > 500 && e.clientY > 500){
-        //downright();
-        //}
-        //else if (e.clientX < 500 && e.clientY < 500){
-        //  topleft();
-        //}
-        //else if (e.clientX < 500 && e.clientY > 500){
-        // downleft();
-        //}
-        //else if (e.clientX > 500 && e.clientY < 500){
-        //  topright();
-        //}
+        if(e.clientX > 500 && e.clientY > 500){
+        downright();
+        }
+        else if (e.clientX < 500 && e.clientY < 500){
+        topleft();
+        }
+        else if (e.clientX < 500 && e.clientY > 500){
+         downleft();
+        }
+        else if (e.clientX > 500 && e.clientY < 500){
+         topright();
+        }
     }
 
 
@@ -154,9 +154,36 @@ document.addEventListener('keydown', Key)
       console.log(key);
     }
       
+  }  
+
+let x = new Date().getTime();
+
+
+function timetaker (x){
+  console.log(x);
+}
+
+function time_dilator(){
+  if (x => x){
+   time_activator()
   }
+}
 
+if (x => x){
+  console.log("toe")
+}
 
+function time_activator(){
+ for (i = 999; i>10; --i){
+    let x = new Date().getTime();
+   if (x => 1000){
+     timetaker(x)
+   }
+
+  }
+  time_dilator();
+}
+time_activator()
 }
 
 </script>

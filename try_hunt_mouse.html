@@ -11,6 +11,8 @@
     
     --green: #08ff00;
   }
+
+
   body{
     background-color: var(--blue)
   }
@@ -120,7 +122,12 @@ document.addEventListener('mousemove', logKey);
         visual(e.clientX);
         visual(e.clinetY);
 
-        if(e.clientX > 500 && e.clientY > 500){
+        let max_pixels = screen.availHeight*screen.availWidth;
+        let screenY = screen.availHeight;
+        let screenX = screen.availWidth;
+        let pixel_count = 20
+
+        if(e.clientX > 20 && e.clientY > 20){
         downright();
         }
         else if (e.clientX < 500 && e.clientY < 500){
@@ -132,6 +139,14 @@ document.addEventListener('mousemove', logKey);
         else if (e.clientX > 500 && e.clientY < 500){
          topright();
         }
+        //for (max_pixels; max_pixels => 0; --max_pixels){
+            for (screenY; screenY => 0; --screenY){ //försöker få så att den vet vilken pixel den är på
+              for (screenX; screenX => 0; --screenX){
+
+              }
+          }
+        }
+
     }
 
 
@@ -168,9 +183,9 @@ function time_dilator(){
    time_activator()
   }
 }
-
-if (x => x){
-  console.log("toe")
+let ree = console.log();
+if (ree === true){
+  //console.log(window.open())
 }
 
 function time_activator(){
@@ -181,10 +196,10 @@ function time_activator(){
    }
 
   }
-  time_dilator();
+  //time_dilator();
 }
 time_activator()
-}
+
 
 </script>
 

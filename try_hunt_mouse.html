@@ -133,6 +133,9 @@ document.addEventListener('mousemove', logKey);
         //for (max_pixels; max_pixels => 0; --max_pixels){
             for (screenY; screenY => 0; --screenY){ //försöker få så att den vet vilken pixel den är på
               for (screenX; screenX => 0; --screenX){
+                
+                let resultY = screenYcon-screenY;
+                let resultX = screenXcon-screenX;
 
                 screen_timing = screen_timing+1
 

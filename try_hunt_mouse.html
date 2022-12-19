@@ -82,15 +82,15 @@ let first_room ={
   roomZ: 200,
 }
 // Create a function for setting a variable value
-function downright() {
+function downright(h) {
   // Set the value of variable --blue to another value (in this case "lightblue")
-  r.style.setProperty('--blue', visual(200));
-  console.log(visual(200));
+  r.style.setProperty('--blue', visual(h));
+  console.log(visual(h));
 }
 
-function topleft() {
-  r.style.setProperty('--blue', visual(4));
-  console.log(visual(118));
+function topleft(h) {
+  r.style.setProperty('--blue', visual(h));
+  console.log(visual(h));
 }
 
 function topright() {
@@ -125,28 +125,36 @@ document.addEventListener('mousemove', logKey);
         let max_pixels = screen.availHeight*screen.availWidth;
         let screenY = screen.availHeight;
         let screenX = screen.availWidth;
-        let pixel_count = 20
+        const screenXcon = screen.availWidth;
+        const screenYcon = screen.availHeight;
+        let pixel_count = 20;
+        let screen_timing = 0;
 
-        if(e.clientX > 20 && e.clientY > 20){
-        downright();
-        }
-        else if (e.clientX < 500 && e.clientY < 500){
-        topleft();
-        }
-        else if (e.clientX < 500 && e.clientY > 500){
-         downleft();
-        }
-        else if (e.clientX > 500 && e.clientY < 500){
-         topright();
-        }
         //for (max_pixels; max_pixels => 0; --max_pixels){
             for (screenY; screenY => 0; --screenY){ //försöker få så att den vet vilken pixel den är på
               for (screenX; screenX => 0; --screenX){
 
-              }
-          }
-        }
+                screen_timing = screen_timing+1
 
+                if (screen_timing > 255){
+                 screen_timing = 0; 
+                }
+
+                if(e.clientX > 20 && e.clientY > 20){
+                  downright();
+                }
+                else if (e.clientX < 500 && e.clientY < 500){
+                  topleft();
+                }
+                else if (e.clientX < 500 && e.clientY > 500){
+                  downleft();
+                }
+                else if (e.clientX > 500 && e.clientY < 500){
+                  topright();
+                }                
+              }
+            }
+          }            
     }
 
 

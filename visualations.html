@@ -14,39 +14,60 @@ var r = document.querySelector(':root');
 
 
 
-class paint {
+class paint {   
+  constructor (xdy, ydy){
+    this.xdy = xdy
+    this.ydy = ydy
 
-    
-        
-    constructor (){
 
-
-    
-    color = "FF00FF";
-
-    xy(xdy, ydy);
-
-        const bit = [xdy*2, ydy*3]  
-
-        return bit
     }
-        
-        lät = xy(34, 45)
+    get xy() {  
+            return this.calcxy();
+        }
+    
+        calcxy() {
+            return this.xdy*this.ydy
+        }
+    
+    lät2 = "jag sitter fast i denna classen!!!"
+    bit2 = true;
+    läs = "bibeln din lilla jävel" 
 
-        lät2 = "jag sitter fast i denna classen!!!"
-
-       bit2=this.lät2;
-
-    x = screen.availWidth;
-    y = screen.availHeight
+    screen_dimentions = {
+        x: screen.availWidth,
+        y: screen.availHeight
+    }    
 }
 
+
+
+class xyz extends paint {
+    constructor (color, numberx, numbery, numberz){
+        super()
+        this.color = color; 
+        this.numberx = this.xdy;
+        this.numbery = this.ydy;
+        this.numberz = numberz;
+    }
     
-let beer = console.log(paint.bit2)
+}
+
+
+
+/*if (new paint(32, 43) === xyz.numberx){
+    console.log(new)
+}else if (n != xyz.numberx){
+    console.error("x är inte x");
+}
+*/
+
+
+
+console.log(new paint(5,5).xy)
 
 
 </script>
 </head>
-<body id="body" onload="beer">
+<body id="body" onload= 'console.log(client.availHeight)'>
 
 </body>

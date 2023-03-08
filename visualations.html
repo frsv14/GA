@@ -17,11 +17,10 @@
 var r = document.querySelector(':root');
 
 
+
 class paint {
-
-    constructor (colorval){
-        colorval = this.colorval
-
+    constructor(colorval){
+        colorval = this.colorval;
     }
     
     get colur(){
@@ -35,60 +34,65 @@ class paint {
  // #0F0F0F - GÅR ÖVER TILL NUMMER = #101010 (rgb val 16 16 16)
  //etc, #FFFFFF = 255 255 255;
 
-    switch (colorval){ //THE GRAFIKS COMPUTE UNIT
-        case 0: colorval = "00"; break; case 10: colorval = "0A"; break; case 20: colorval = "14"; break; case 30: colorval = "1E"; break; case 40: colorval = "28"; break; case 50: colorval = "32"; break; case 60: colorval = "3C"; break; case 70: colorval = "46"; break; case 80: colorval = "50"; break; case 90: colorval = "5A"; break; case 100: colorval = "64"; break; case 110: colorval = "6E"; break; case 120: colorval = "78"; break; case 130: colorval = "82"; break; case 140: colorval = "8C"; break; case 150: colorval = "96"; break; case 160: colorval = "A0"; break; case 170: colorval = "AA"; break; case 180: colorval = "B4"; break; case 190: colorval = "BE"; break; case 200: colorval = "C8"; break; case 210: colorval = "D2"; break; case 220: colorval = "DC"; break; case 230: colorval = "E6"; break; case 240: colorval = "F0"; break; case 250: colorval = "FA"; break;
-        case 1: colorval = "01"; break; case 11: colorval = "0B"; break; case 21: colorval = "15"; break; case 31: colorval = "1F"; break; case 41: colorval = "29"; break; case 51: colorval = "33"; break; case 61: colorval = "3D"; break; case 71: colorval = "47"; break; case 81: colorval = "51"; break; case 91: colorval = "5B"; break; case 101: colorval = "65"; break; case 111: colorval = "6F"; break; case 121: colorval = "79"; break; case 131: colorval = "83"; break; case 141: colorval = "8D"; break; case 151: colorval = "97"; break; case 161: colorval = "A1"; break; case 171: colorval = "AB"; break; case 181: colorval = "B5"; break; case 191: colorval = "BF"; break; case 201: colorval = "C9"; break; case 211: colorval = "D3"; break; case 221: colorval = "DD"; break; case 231: colorval = "E7"; break; case 241: colorval = "F1"; break; case 251: colorval = "FB"; break;
-        case 2: colorval = "02"; break; case 12: colorval = "0C"; break; case 22: colorval = "16"; break; case 32: colorval = "20"; break; case 42: colorval = "2A"; break; case 52: colorval = "34"; break; case 62: colorval = "3E"; break; case 72: colorval = "48"; break; case 82: colorval = "52"; break; case 92: colorval = "5C"; break; case 102: colorval = "66"; break; case 112: colorval = "70"; break; case 122: colorval = "7A"; break; case 132: colorval = "84"; break; case 142: colorval = "8E"; break; case 152: colorval = "98"; break; case 162: colorval = "A2"; break; case 172: colorval = "AC"; break; case 182: colorval = "B6"; break; case 192: colorval = "C0"; break; case 202: colorval = "CA"; break; case 212: colorval = "D4"; break; case 222: colorval = "DE"; break; case 232: colorval = "E8"; break; case 242: colorval = "F2"; break; case 252: colorval = "FC"; break;
-        case 3: colorval = "03"; break; case 13: colorval = "0D"; break; case 23: colorval = "17"; break; case 33: colorval = "21"; break; case 43: colorval = "2B"; break; case 53: colorval = "35"; break; case 63: colorval = "3F"; break; case 73: colorval = "49"; break; case 83: colorval = "53"; break; case 93: colorval = "5D"; break; case 103: colorval = "67"; break; case 113: colorval = "71"; break; case 123: colorval = "7B"; break; case 133: colorval = "85"; break; case 143: colorval = "8F"; break; case 153: colorval = "99"; break; case 163: colorval = "A3"; break; case 173: colorval = "AD"; break; case 183: colorval = "B7"; break; case 193: colorval = "C1"; break; case 203: colorval = "CB"; break; case 213: colorval = "D5"; break; case 223: colorval = "DF"; break; case 233: colorval = "E9"; break; case 243: colorval = "F3"; break; case 253: colorval = "FD"; break;
-        case 4: colorval = "04"; break; case 14: colorval = "0E"; break; case 24: colorval = "18"; break; case 34: colorval = "22"; break; case 44: colorval = "2C"; break; case 54: colorval = "36"; break; case 64: colorval = "40"; break; case 74: colorval = "4A"; break; case 84: colorval = "54"; break; case 94: colorval = "5E"; break; case 104: colorval = "68"; break; case 114: colorval = "72"; break; case 124: colorval = "7C"; break; case 134: colorval = "86"; break; case 144: colorval = "90"; break; case 154: colorval = "9A"; break; case 164: colorval = "A4"; break; case 174: colorval = "AE"; break; case 184: colorval = "B8"; break; case 194: colorval = "C2"; break; case 204: colorval = "CC"; break; case 214: colorval = "D6"; break; case 224: colorval = "E0"; break; case 234: colorval = "EA"; break; case 244: colorval = "F4"; break; case 254: colorval = "FE"; break;
-        case 5: colorval = "05"; break; case 15: colorval = "0F"; break; case 25: colorval = "19"; break; case 35: colorval = "23"; break; case 45: colorval = "2D"; break; case 55: colorval = "37"; break; case 65: colorval = "41"; break; case 75: colorval = "4B"; break; case 85: colorval = "55"; break; case 95: colorval = "5F"; break; case 105: colorval = "69"; break; case 115: colorval = "73"; break; case 125: colorval = "7D"; break; case 135: colorval = "87"; break; case 145: colorval = "91"; break; case 155: colorval = "9B"; break; case 165: colorval = "A5"; break; case 175: colorval = "AF"; break; case 185: colorval = "B9"; break; case 195: colorval = "C3"; break; case 205: colorval = "CD"; break; case 215: colorval = "D7"; break; case 225: colorval = "E1"; break; case 235: colorval = "EB"; break; case 245: colorval = "F5"; break; case 255: colorval = "FF"; break;
-        case 6: colorval = "06"; break; case 16: colorval = "10"; break; case 26: colorval = "1A"; break; case 36: colorval = "24"; break; case 46: colorval = "2E"; break; case 56: colorval = "38"; break; case 66: colorval = "42"; break; case 76: colorval = "4C"; break; case 86: colorval = "56"; break; case 96: colorval = "60"; break; case 106: colorval = "6A"; break; case 116: colorval = "74"; break; case 126: colorval = "7E"; break; case 136: colorval = "88"; break; case 146: colorval = "92"; break; case 156: colorval = "9C"; break; case 166: colorval = "A6"; break; case 176: colorval = "B0"; break; case 186: colorval = "BA"; break; case 196: colorval = "C4"; break; case 206: colorval = "CE"; break; case 216: colorval = "D8"; break; case 226: colorval = "E2"; break; case 236: colorval = "EC"; break; case 246: colorval = "F6"; break;
-        case 7: colorval = "07"; break; case 17: colorval = "11"; break; case 27: colorval = "1B"; break; case 37: colorval = "25"; break; case 47: colorval = "2F"; break; case 57: colorval = "39"; break; case 67: colorval = "43"; break; case 77: colorval = "4D"; break; case 87: colorval = "57"; break; case 97: colorval = "61"; break; case 107: colorval = "6B"; break; case 117: colorval = "75"; break; case 127: colorval = "7F"; break; case 137: colorval = "89"; break; case 147: colorval = "93"; break; case 157: colorval = "9D"; break; case 167: colorval = "A7"; break; case 177: colorval = "B1"; break; case 187: colorval = "BB"; break; case 197: colorval = "C5"; break; case 207: colorval = "CF"; break; case 217: colorval = "D9"; break; case 227: colorval = "E3"; break; case 237: colorval = "ED"; break; case 247: colorval = "F7"; break;
-        case 8: colorval = "08"; break; case 18: colorval = "12"; break; case 28: colorval = "1C"; break; case 38: colorval = "26"; break; case 48: colorval = "30"; break; case 58: colorval = "3A"; break; case 68: colorval = "44"; break; case 78: colorval = "4E"; break; case 88: colorval = "58"; break; case 98: colorval = "62"; break; case 108: colorval = "6C"; break; case 118: colorval = "76"; break; case 128: colorval = "80"; break; case 138: colorval = "8A"; break; case 148: colorval = "94"; break; case 158: colorval = "9E"; break; case 168: colorval = "A8"; break; case 178: colorval = "B2"; break; case 188: colorval = "BC"; break; case 198: colorval = "C6"; break; case 208: colorval = "D0"; break; case 218: colorval = "DA"; break; case 228: colorval = "E4"; break; case 238: colorval = "EE"; break; case 248: colorval = "F8"; break;
-        case 9: colorval = "09"; break; case 19: colorval = "13"; break; case 29: colorval = "1D"; break; case 39: colorval = "27"; break; case 49: colorval = "31"; break; case 59: colorval = "3B"; break; case 69: colorval = "45"; break; case 79: colorval = "4F"; break; case 89: colorval = "59"; break; case 99: colorval = "63"; break; case 109: colorval = "6D"; break; case 119: colorval = "77"; break; case 129: colorval = "81"; break; case 139: colorval = "8B"; break; case 149: colorval = "95"; break; case 159: colorval = "9F"; break; case 169: colorval = "A9"; break; case 179: colorval = "B3"; break; case 189: colorval = "BD"; break; case 199: colorval = "C7"; break; case 209: colorval = "D1"; break; case 219: colorval = "DB"; break; case 229: colorval = "E5"; break; case 239: colorval = "EF"; break; case 249: colorval = "F9"; break; 
-    }
-    console.log(colorval)
-    let hexa = "#"+colorval+colorval+colorval;
+        switch (this.colorval){ //THE GRAFIKS COMPUTE UNIT
+            case 0: colorval = "00"; break; case 10: colorval = "0A"; break; case 20: colorval = "14"; break; case 30: colorval = "1E"; break; case 40: colorval = "28"; break; case 50: colorval = "32"; break; case 60: colorval = "3C"; break; case 70: colorval = "46"; break; case 80: colorval = "50"; break; case 90: colorval = "5A"; break; case 100: colorval = "64"; break; case 110: colorval = "6E"; break; case 120: colorval = "78"; break; case 130: colorval = "82"; break; case 140: colorval = "8C"; break; case 150: colorval = "96"; break; case 160: colorval = "A0"; break; case 170: colorval = "AA"; break; case 180: colorval = "B4"; break; case 190: colorval = "BE"; break; case 200: colorval = "C8"; break; case 210: colorval = "D2"; break; case 220: colorval = "DC"; break; case 230: colorval = "E6"; break; case 240: colorval = "F0"; break; case 250: colorval = "FA"; break;
+            case 1: colorval = "01"; break; case 11: colorval = "0B"; break; case 21: colorval = "15"; break; case 31: colorval = "1F"; break; case 41: colorval = "29"; break; case 51: colorval = "33"; break; case 61: colorval = "3D"; break; case 71: colorval = "47"; break; case 81: colorval = "51"; break; case 91: colorval = "5B"; break; case 101: colorval = "65"; break; case 111: colorval = "6F"; break; case 121: colorval = "79"; break; case 131: colorval = "83"; break; case 141: colorval = "8D"; break; case 151: colorval = "97"; break; case 161: colorval = "A1"; break; case 171: colorval = "AB"; break; case 181: colorval = "B5"; break; case 191: colorval = "BF"; break; case 201: colorval = "C9"; break; case 211: colorval = "D3"; break; case 221: colorval = "DD"; break; case 231: colorval = "E7"; break; case 241: colorval = "F1"; break; case 251: colorval = "FB"; break;
+            case 2: colorval = "02"; break; case 12: colorval = "0C"; break; case 22: colorval = "16"; break; case 32: colorval = "20"; break; case 42: colorval = "2A"; break; case 52: colorval = "34"; break; case 62: colorval = "3E"; break; case 72: colorval = "48"; break; case 82: colorval = "52"; break; case 92: colorval = "5C"; break; case 102: colorval = "66"; break; case 112: colorval = "70"; break; case 122: colorval = "7A"; break; case 132: colorval = "84"; break; case 142: colorval = "8E"; break; case 152: colorval = "98"; break; case 162: colorval = "A2"; break; case 172: colorval = "AC"; break; case 182: colorval = "B6"; break; case 192: colorval = "C0"; break; case 202: colorval = "CA"; break; case 212: colorval = "D4"; break; case 222: colorval = "DE"; break; case 232: colorval = "E8"; break; case 242: colorval = "F2"; break; case 252: colorval = "FC"; break;
+            case 3: colorval = "03"; break; case 13: colorval = "0D"; break; case 23: colorval = "17"; break; case 33: colorval = "21"; break; case 43: colorval = "2B"; break; case 53: colorval = "35"; break; case 63: colorval = "3F"; break; case 73: colorval = "49"; break; case 83: colorval = "53"; break; case 93: colorval = "5D"; break; case 103: colorval = "67"; break; case 113: colorval = "71"; break; case 123: colorval = "7B"; break; case 133: colorval = "85"; break; case 143: colorval = "8F"; break; case 153: colorval = "99"; break; case 163: colorval = "A3"; break; case 173: colorval = "AD"; break; case 183: colorval = "B7"; break; case 193: colorval = "C1"; break; case 203: colorval = "CB"; break; case 213: colorval = "D5"; break; case 223: colorval = "DF"; break; case 233: colorval = "E9"; break; case 243: colorval = "F3"; break; case 253: colorval = "FD"; break;
+            case 4: colorval = "04"; break; case 14: colorval = "0E"; break; case 24: colorval = "18"; break; case 34: colorval = "22"; break; case 44: colorval = "2C"; break; case 54: colorval = "36"; break; case 64: colorval = "40"; break; case 74: colorval = "4A"; break; case 84: colorval = "54"; break; case 94: colorval = "5E"; break; case 104: colorval = "68"; break; case 114: colorval = "72"; break; case 124: colorval = "7C"; break; case 134: colorval = "86"; break; case 144: colorval = "90"; break; case 154: colorval = "9A"; break; case 164: colorval = "A4"; break; case 174: colorval = "AE"; break; case 184: colorval = "B8"; break; case 194: colorval = "C2"; break; case 204: colorval = "CC"; break; case 214: colorval = "D6"; break; case 224: colorval = "E0"; break; case 234: colorval = "EA"; break; case 244: colorval = "F4"; break; case 254: colorval = "FE"; break;
+            case 5: colorval = "05"; break; case 15: colorval = "0F"; break; case 25: colorval = "19"; break; case 35: colorval = "23"; break; case 45: colorval = "2D"; break; case 55: colorval = "37"; break; case 65: colorval = "41"; break; case 75: colorval = "4B"; break; case 85: colorval = "55"; break; case 95: colorval = "5F"; break; case 105: colorval = "69"; break; case 115: colorval = "73"; break; case 125: colorval = "7D"; break; case 135: colorval = "87"; break; case 145: colorval = "91"; break; case 155: colorval = "9B"; break; case 165: colorval = "A5"; break; case 175: colorval = "AF"; break; case 185: colorval = "B9"; break; case 195: colorval = "C3"; break; case 205: colorval = "CD"; break; case 215: colorval = "D7"; break; case 225: colorval = "E1"; break; case 235: colorval = "EB"; break; case 245: colorval = "F5"; break; case 255: colorval = "FF"; break;
+            case 6: colorval = "06"; break; case 16: colorval = "10"; break; case 26: colorval = "1A"; break; case 36: colorval = "24"; break; case 46: colorval = "2E"; break; case 56: colorval = "38"; break; case 66: colorval = "42"; break; case 76: colorval = "4C"; break; case 86: colorval = "56"; break; case 96: colorval = "60"; break; case 106: colorval = "6A"; break; case 116: colorval = "74"; break; case 126: colorval = "7E"; break; case 136: colorval = "88"; break; case 146: colorval = "92"; break; case 156: colorval = "9C"; break; case 166: colorval = "A6"; break; case 176: colorval = "B0"; break; case 186: colorval = "BA"; break; case 196: colorval = "C4"; break; case 206: colorval = "CE"; break; case 216: colorval = "D8"; break; case 226: colorval = "E2"; break; case 236: colorval = "EC"; break; case 246: colorval = "F6"; break;
+            case 7: colorval = "07"; break; case 17: colorval = "11"; break; case 27: colorval = "1B"; break; case 37: colorval = "25"; break; case 47: colorval = "2F"; break; case 57: colorval = "39"; break; case 67: colorval = "43"; break; case 77: colorval = "4D"; break; case 87: colorval = "57"; break; case 97: colorval = "61"; break; case 107: colorval = "6B"; break; case 117: colorval = "75"; break; case 127: colorval = "7F"; break; case 137: colorval = "89"; break; case 147: colorval = "93"; break; case 157: colorval = "9D"; break; case 167: colorval = "A7"; break; case 177: colorval = "B1"; break; case 187: colorval = "BB"; break; case 197: colorval = "C5"; break; case 207: colorval = "CF"; break; case 217: colorval = "D9"; break; case 227: colorval = "E3"; break; case 237: colorval = "ED"; break; case 247: colorval = "F7"; break;
+            case 8: colorval = "08"; break; case 18: colorval = "12"; break; case 28: colorval = "1C"; break; case 38: colorval = "26"; break; case 48: colorval = "30"; break; case 58: colorval = "3A"; break; case 68: colorval = "44"; break; case 78: colorval = "4E"; break; case 88: colorval = "58"; break; case 98: colorval = "62"; break; case 108: colorval = "6C"; break; case 118: colorval = "76"; break; case 128: colorval = "80"; break; case 138: colorval = "8A"; break; case 148: colorval = "94"; break; case 158: colorval = "9E"; break; case 168: colorval = "A8"; break; case 178: colorval = "B2"; break; case 188: colorval = "BC"; break; case 198: colorval = "C6"; break; case 208: colorval = "D0"; break; case 218: colorval = "DA"; break; case 228: colorval = "E4"; break; case 238: colorval = "EE"; break; case 248: colorval = "F8"; break;
+            case 9: colorval = "09"; break; case 19: colorval = "13"; break; case 29: colorval = "1D"; break; case 39: colorval = "27"; break; case 49: colorval = "31"; break; case 59: colorval = "3B"; break; case 69: colorval = "45"; break; case 79: colorval = "4F"; break; case 89: colorval = "59"; break; case 99: colorval = "63"; break; case 109: colorval = "6D"; break; case 119: colorval = "77"; break; case 129: colorval = "81"; break; case 139: colorval = "8B"; break; case 149: colorval = "95"; break; case 159: colorval = "9F"; break; case 169: colorval = "A9"; break; case 179: colorval = "B3"; break; case 189: colorval = "BD"; break; case 199: colorval = "C7"; break; case 209: colorval = "D1"; break; case 219: colorval = "DB"; break; case 229: colorval = "E5"; break; case 239: colorval = "EF"; break; case 249: colorval = "F9"; break; 
+        }
+    colorval = "#"+colorval+colorval+colorval;
     
-    if(hexa === "#undefinedundefinedundefined"){
+    if(colorval === "#undefinedundefinedundefined"){
         alert("bitching");
     }
 
-    return hexa;  
+    return colorval;  
 
     }
-
 }
 
-class xyz extends paint {
 
-    constructor (numberx, numbery, numberz){
-        super()
-        this.colorval = new paint(255); 
-        numberx = this.xdy;
-        numbery = this.ydy;
-        numberz = this.numberz;
-    }
+class xyz extends paint{
 
-    get controle() {
-        return this.bitwit21();
-    } 
+constructor (numberx, numbery, numberz, colorval){
+    super(colorval)
+    newval = this.colorval;
+    new paint(this.colorval).colur; 
     
-    bitwit21() {
-        if (this.colorval === this.colorval.toString()){
-            return this.colorval;
-        }else{
-            return console.error("colorval not a string");
-        } 
-        if (this.xdy === this.xdy.toString()){
-            return this.xdy
-        }else{
-            return console.error("xyd not a number");
-        }
-    }
+    numberx = this.xdy;
+    numbery = this.ydy;
+    numberz = this.numberz;
 }
 
-console.log(new xyz(7, 6, 9).controle) 
+get controle() {
+    return this.bitwit21();
+} 
+
+
+bitwit21() {
+    if (this.newval === this.newval.toString()){
+        return this.newval;
+    }else{
+        return Error("colorvalue not a string");
+    } 
+    if (this.xdy === this.xdy.toString()){
+        return this.xdy
+    }else{
+        return Error("xyd not a number");
+    }
+}
+}
+
+
+
+console.log(new xyz(7, 6, 9, 255).controle) 
+
 
 </script>
 </head>

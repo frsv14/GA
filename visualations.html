@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,8 +11,6 @@
     
     --green: #08ff00;
   }
-
-
   body{
     background-color: var(--blue)
   }
@@ -27,7 +28,7 @@ function visual(color) {//THE GRAFIKS CARD
 
  // #090909 - går över till bokstäver = #0A0A0A (rgb val 10 10 10)
  // #0F0F0F - GÅR ÖVER TILL NUMMER = #101010 (rgb val 16 16 16)
- //etc, #FFFFFF = 255 255 255;
+ //etc,
   
 
 switch (color){ //THE GRAFIKS COMPUTE UNIT
@@ -81,21 +82,21 @@ let first_room ={
 // Create a function for setting a variable value
 function downright() {
   // Set the value of variable --blue to another value (in this case "lightblue")
-  r.style.setProperty('--blue', visual(200));
-  console.log(visual(200));
+  r.style.setProperty('--blue', visual(125));
+  console.log(visual(5))
 }
 
 function topleft() {
-  r.style.setProperty('--blue', visual(4));
-  console.log(visual(118));
+  r.style.setProperty('--blue', visual(8))
+  console.log(visual(11))
 }
 
 function topright() {
-   r.style.setProperty('--blue', 'HotPink');
+   r.style.setProperty('--blue', 'HotPink')
 }
 
 function downleft() {
-  r.style.setProperty('--blue', 'Aqua');
+  r.style.setProperty('--blue', 'Aqua')
 }
 function Room (){
  let Y = this.roomY;   
@@ -114,40 +115,22 @@ document.addEventListener('mousemove', logKey);
         Screen X/Y: ${e.screenX}, ${e.screenY}
         Client X/Y: ${e.clientX}, ${e.clientY}`;
         
-        //console.log(e.clientX+" :X Y: "+e.clientY);
-
-        visual(e.clientX);
-        visual(e.clinetY);
-
-        let max_pixels = screen.availHeight*screen.availWidth;
-        let screenY = screen.availHeight;
-        let screenX = screen.availWidth;
-        let pixel_count = 20
-
-        if(e.clientX > 20 && e.clientY > 20){
-        downright();
+        
+        if(e.clientX > 1000 && e.clientY > 500){
+          downright();
         }
-        else if (e.clientX < 500 && e.clientY < 500){
-        topleft();
+        else if (e.clientX < 1000 && e.clientY < 500){
+          topleft();
         }
-        else if (e.clientX < 500 && e.clientY > 500){
-         downleft();
+        else if (e.clientX < 1000 && e.clientY > 500){
+          downleft();
         }
-        else if (e.clientX > 500 && e.clientY < 500){
-         topright();
+        else if (e.clientX > 1000 && e.clientY < 500){
+          topright();
         }
-        //for (max_pixels; max_pixels => 0; --max_pixels){
-            for (screenY; screenY => 0; --screenY){ //försöker få så att den vet vilken pixel den är på
-              for (screenX; screenX => 0; --screenX){
-
-              }
-          }
-        }
-
     }
 
 
- 
 let Buttonsresult = document.querySelector('#buttons-pressed');
 document.addEventListener('keydown', Key)
 
@@ -166,37 +149,10 @@ document.addEventListener('keydown', Key)
       console.log(key);
     }
       
-  }  
-
-let x = new Date().getTime();
-
-
-function timetaker (x){
-  console.log(x);
-}
-
-function time_dilator(){
-  if (x => x){
-   time_activator()
   }
-}
-let ree = console.log();
-if (ree === true){
-  //console.log(window.open())
-}
 
-function time_activator(){
- for (i = 999; i>10; --i){
-    let x = new Date().getTime();
-   if (x => 1000){
-     timetaker(x)
-   }
 
-  }
-  //time_dilator();
 }
-time_activator()
-
 
 </script>
 
